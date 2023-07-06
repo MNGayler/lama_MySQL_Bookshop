@@ -1,4 +1,3 @@
-import e from "express";
 import express from "express";
 import mysql from "mysql";
 import cors from "cors"
@@ -29,11 +28,12 @@ app.get("/books", (req, res) => {
 
 // add book
 app.post("/books", (req, res) => {
-  const q = "INSERT INTO books (`title`,`desc`,`cover`) VALUES (?)";
+  const q = "INSERT INTO books (`title`,`desc`, `price`, `cover`) VALUES (?)";
   const values = [
     req.body.title,
     req.body.desc,
-    req.body.cover
+    req.body.price,
+    req.body.cover,
 ];
 
   db.query(q, [values], (err, data) => {
