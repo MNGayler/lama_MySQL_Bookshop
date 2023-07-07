@@ -21,6 +21,28 @@
     align-items: center;
 }
 
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input{ 
+    width: 250px;
+    padding: 10px;
+    border: 1px solid grey;
+
+}
+
+.formButton{
+    border: none;
+    padding: 10px;
+    background-color: rgb(228, 190, 35);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 img {
     width: 200px;
     height: 300px;
